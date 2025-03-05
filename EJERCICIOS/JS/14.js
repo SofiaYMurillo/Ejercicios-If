@@ -1,7 +1,4 @@
-<h1>SandwichOrder</h1>
-    
-
-    let tamaño = prompt("Ingrese el tamaño del que desea su sandwich")
+  let tamaño = prompt("Ingrese el tamaño del que desea su sandwich")
     let tocineta = prompt("¿Deea tocineta? (si/no)")
     let jalapeño = prompt("¿Desea jalapeño? (si/no")
     let pavo = prompt("¿Desea pavo? (si/no)")

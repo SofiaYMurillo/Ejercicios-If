@@ -1,6 +1,4 @@
-<h1>Verificar si un triangulo es valido o no</h1>
-
-    let A1 = parseInt(prompt("Ingrese el primer angulo: "))
+let A1 = parseInt(prompt("Ingrese el primer angulo: "))
     let A2 = parseInt(prompt("Ingrese el segundo angulo: "))
     let A3 = parseInt(prompt("Ingrese el tercer angulo: "))
 

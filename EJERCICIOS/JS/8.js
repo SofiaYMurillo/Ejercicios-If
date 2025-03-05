@@ -1,24 +1,15 @@
-<h1>Mensualidad Gimnasio</h1>
-   
-   let mensualidad = parseInt(prompt("Ingrese el tiempo de membresia (15, 30 o 90 dias"))
-
-   let Valor15dias = $18000;
-   let Valor30dias = $35000;
-   let Valor3meses = $86000;
-
-     let cantidad
-
-     switch (M) {
-        case 15:
-            V = Valor15dias;
-            break;
-        case 30:
-            V = Valor30dias;
-            break;
-        case 90:
-            V = Valor3meses;
-            break;
-        default:
-            V = "Tiempo de membresia invalido";
+function calcularCosto(dias) {
+    let costo;
+    
+    if (dias === 15) {
+        costo = 18000;
+    } else if (dias === 30) {
+        costo = 35000;
+    } else if (dias === 90) { // 3 meses = 90 días
+        costo = 86000;
+    } else {
+        return "Cantidad de días no válida. Por favor, elija entre 15, 30 o 90 días.";
     }
-    alert('El valor de tu membresia es: {}')
+    
+    return `El costo de la mensualidad para ${dias} días es de $${costo}.`;
+}

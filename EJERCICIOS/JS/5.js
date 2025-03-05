@@ -1,6 +1,4 @@
-<h1>Calcular El Rendimiento Académico</h1>
-
-        let fisica = parseFloat(prompt("Ingrese su calificación (0 a 10):"))
+    let fisica = parseFloat(prompt("Ingrese su calificación (0 a 10):"))
         let quimica = parseFloat(prompt("Ingrese su calificación (0 a 10):"))
         let biologia = parseFloat(prompt("Ingrese su calificación (0 a 10):"))
         let matematicas = parseFloat(prompt("Ingrese su calificación (0 a 10):"))

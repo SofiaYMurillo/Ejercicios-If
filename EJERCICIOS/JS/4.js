@@ -1,16 +1,9 @@
-<h1>Determinar si un numero ingresado por el usuario es par o impar.</h1>
+function determinarParImpar(numero) {
+    if (numero % 2 === 0) {
 
-    let Numero = prompt("Ingrese un numero")
-    let R;
-
-    switch (Numero % 2){
-        case 0:
-            R = "El numero es par";
-            break;
-        case 1:
-            R = "El numero es impar";
-            break;
-        default:
-            R = "El numero es invalido"; 
+        console.log(numero + " es un número par.");
+    } else if (numero % 2 !== 0) {
+        
+        console.log(numero + " es un número impar.");
     }
-    alert(R);
+}

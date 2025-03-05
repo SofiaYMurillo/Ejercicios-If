@@ -1,24 +1,15 @@
-<h1>Precio de fotocopias</h1>
+ let precio_por_copia = 0;
 
-    let numerodecopias = parseInt(prompt("Ingrese l numero de copias que desea imprimir: "))
-    let precioporcopia
-
-    switch (verdadero) {
-        case (numerocopias >= 0 && numerocopias <=499):
-            precioporcopia = $120;
-            break;
-        case (numerodecopias >= 500 && numerodecopias <= 749):
-            precioporcopia = $100;
-            break;
-        case (numerodecopias >= 750 && numerodecopias <= 999):
-            precioporcopia = $80;
-        case (numerodecopias >= 100):
-            precioporcopia = $50;
-            break;
-        default:
-            precioporcopia = NaN;
+    if (cantidad_copias > 0 && cantidad_copias < 500) {
+        precio_por_copia = 120;
+    }else if (cantidad_copias > 499 && cantidad_copias < 750) {
+        precio_por_copia = 100;
+    }else if (cantidad_copias > 749 && cantidad_copias < 1000) {
+        precio_por_copia = 80;
+    }else {
+        alert("cantidad de copias inválida");
     }
 
-    let precio = precioporcopia * numerodecopias;
-
-    alert('El precio por copia es {PpC} y el precio total de copias es {Pt}')
+   
+    alert("El precio por copia es " + precio_por_copia);
+    alert("Su total es: " + cantidad_copias + precio_por_copia);

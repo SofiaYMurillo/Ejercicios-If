@@ -1,6 +1,4 @@
-<h1>Determinar el estado de la computadora</h1> 
-
-     let EP = prompt("¿El equipo emite un pitido al iniciarse? (si/no)")
+ let EP = prompt("¿El equipo emite un pitido al iniciarse? (si/no)")
      let DG = prompt("¿El disco duro gira? (si/no)")
 
      let M;

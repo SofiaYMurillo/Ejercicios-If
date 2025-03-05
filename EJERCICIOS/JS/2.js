@@ -1,26 +1,10 @@
 
-    <h1>Verificar si un numero es par o impar</h1>
+        function determinarParImpar(numero) {
+            if (numero % 2 === 0) {
 
+                console.log(numero + " es un número par.");
+            } else if (numero % 2 !== 0) {
 
-        let numero = prompt("Ingrese un número:");
-
-        numero = parseInt(numero);
-
-        if (numero % 2 === 0) {
-            alert("El numero " + numero + " es par.")
-        } else {
-            alert("El número " + numero + " es impar.")
-
+                console.log(numero + " es un número impar.");
+            }
         }
-
-switch (numero % 2) {
-    case 0:
-        resultado = "El numero es par";
-        break;
-    case 1:
-        resultado = "El numero es impar";
-        break;
-    default:
-        resultado = "Valor invalido";
-}
-alert(resultado);
