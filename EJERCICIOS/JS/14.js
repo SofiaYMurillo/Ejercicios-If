@@ -1,42 +1,42 @@
-  let tamaño = prompt("Ingrese el tamaño del que desea su sandwich")
-    let tocineta = prompt("¿Deea tocineta? (si/no)")
-    let jalapeño = prompt("¿Desea jalapeño? (si/no")
-    let pavo = prompt("¿Desea pavo? (si/no)")
-    let queso = prompt("¿Desea queso? (si/no)")
+function calcularCostos(tamaño) {
+  let cb = 0;
+  
+  if (tamaño === "pequeño") {
+      cb = 6000;
+  } else if (tamaño === "grande") {
+      cb = 12000;
+  } else {
+      alert('Tamaño incorrecto.');
+  }
+  
+  return cb;
+}
 
-    let cb;
-      if (tamaño === "pequeño") {
-          
-         cb = $6000;
+function obtenerAdicionales(ingredientes) {
+  let adicionales = 0;
 
-    } else if (tamaño === "grande") {
+  if (ingredientes.tocineta === "si") {
+      adicionales += 3000;
+  }
+  if (ingredientes.pavo === "si") { 
+      adicionales += 3000;
+  }
+  if (ingredientes.queso === "si") {
+      adicionales += 2500;
+  }
+  // Jalapeño es gratis, no se suma costo
 
-        cb = $12000;
+  return adicionales;
+}
 
-    } else {
-        alert('Tamaño incorrecto.');
-        cb = $0;
-    }
+// Ejecutamos las funciones para obtener la orden y calcular el costo total
+let pedido = crearPedidoDeSandwich();
+let costoBase = calcularCostos(pedido.tamaño);
+let costoAdicionales = obtenerAdicionales(pedido);
 
-    let ca = $0;
-      if (tocineta === "si"){
-        ca += $3000;
-
-      }
-      if (jalapeño === "si"){
-          ca += $0;
-
-      }
-      if (pavo === "si"){
-        ca += $3000;
-
-      }
-      if (queso === "si"){
-        ca+= $2500;
-
-      }
-
-      let VT = VC + VA;
-        if(cb !== 0){
-            alert('El valor total del pedido es: {VT}')
-        }
+if (costoBase > 0) {
+  let costoTotal = costoBase + costoAdicionales;
+  console.log(`El costo total de su sándwich es de $${costoTotal}`);
+} else {
+  console.log("No se pudo calcular el precio debido a un error en el tamaño del sándwich.");
+}

@@ -5,8 +5,8 @@ let A1 = parseInt(prompt("Ingrese el primer angulo: "))
     let SA = A1 + A2 + A3;
 
     if (SA === 180) {
-        alert('El triangulo es valido')
+        console.log(`El triangulo es valido`)
     } else{
        
-        alert('el triangulo es invalido')
+        console.log(`el triangulo es invalido`)
     }

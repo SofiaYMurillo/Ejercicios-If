@@ -1,14 +1,16 @@
-let N1 = Numero(prompt("Ingrese el primer numero: "))
-let N2 = Numero(prompt("Ingrese el segundo numero: "))
-let N3 = Numero(prompt("Ingrese el tercer numero:"))
-let NM;
+function encontrarNumeroMayor() {
+    let N1 = parseFloat(prompt("Ingrese el primer número:"));
+    let N2 = parseFloat(prompt("Ingrese el segundo número:"));
+    let N3 = parseFloat(prompt("Ingrese el tercer número:"));
 
-if (N1 >= N2 && N1 >= N3){
-    NM = N1;
-} else if (N2 >= N1 && N2 >= N3) {
-    NM = N2;
-} else {
-    NM = N3;
+    if (isNaN(N1) || isNaN(N2) || isNaN(N3)) {
+        console.log("Entrada inválida. Ingrese solo números.");
+        return;
+    }
+
+    let NM = Math.max(N1, N2, N3);
+    console.log(`El número más grande es: ${NM}`);
 }
 
-alert("El numero mas largo es: {NM}") 
+// Llamar a la función
+encontrarNumeroMayor();
